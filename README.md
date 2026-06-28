@@ -1,73 +1,275 @@
-# Automated-Exam-Management-System
-This project is a GUI-based Automated Exam Management System developed using Unsupervised Learning (K-Means Clustering). It efficiently manages student seating arrangements and faculty allocation for large-scale university exams.
-Overview
-The system handles approximately 2400–2500 students across multiple domains and batches, ensuring optimal room utilization and organized exam environments.
- Objectives
-Automate exam seating plan generation
-Group students using K-Means clustering (based on domain & batch)
-Allocate faculty based on domain expertise
-Optimize room capacity usage
-Provide a user-friendly interface for administration
- Key Features
-- Student Data Generation & Preprocessing
-- K-Means Clustering for grouping students
-- Optimized Seating Plan (with multi-shift support)
-- Faculty Allocation per room
-- Data Visualization (charts & graphs)
-- Report Generation (TXT & Excel export)
-- Interactive GUI (Tkinter-based)
-- System Workflow
-Data Collection
-Students from batches 19–23 across 5 domains
-Room capacities (25–35 seats)
-Faculty data
-Data Preprocessing
-Encoding categorical features (domain, batch)
-Feature scaling
-K-Means Clustering
-Students grouped based on domain & batch
-Optimal clusters ≈ number of rooms
-Seating Plan Generation
-Assign students to rooms based on clusters
-Ensure capacity constraints
-Handle multiple exam shifts
-Faculty Allocation
-Assign faculty based on domain presence in rooms
-Balanced distribution using round-robin
-Reporting
-Generate summary reports
-Export data to Excel
-🛠️ Technologies Used
-Python
-NumPy & Pandas (data handling)
-Scikit-learn (K-Means clustering)
-Tkinter (GUI)
-Matplotlib (visualization)
-📊 Output Includes
-Seating plan (room-wise & shift-wise)
-Faculty allocation per room
-Cluster distribution
-Domain & batch statistics
-Exportable reports
-  - How to Run
-# Install dependencies
-pip install numpy pandas matplotlib scikit-learn openpyxl
+# Automated Exam Management System
 
-# Run the application
+## Overview
+
+The **Automated Exam Management System** is a desktop-based application developed in **Python** that automates the process of generating examination seating arrangements and faculty allocations for large-scale university examinations. The system utilizes the **K-Means Clustering** algorithm to group students based on their academic domain and batch, ensuring organized seating while maximizing room utilization.
+
+The application is designed with a graphical user interface (GUI) using **Tkinter**, allowing administrators to generate seating plans, assign invigilators, visualize statistical data, and export reports with minimal manual effort.
+
+---
+
+## Objectives
+
+The primary objectives of this project are:
+
+* Automate examination seating plan generation.
+* Group students using the K-Means clustering algorithm.
+* Allocate faculty members based on academic domain expertise.
+---
+
+## Features
+
+* Automated student data generation and preprocessing.
+* Student grouping using K-Means clustering.
+* Room-wise and shift-wise seating allocation.
+* Faculty allocation based on academic domains.
+
+---
+
+## System Workflow
+
+### 1. Data Collection
+
+The system generates and processes:
+
+* Student records from batches **2019–2023**
+* Students belonging to multiple academic domains
+* Examination room information
+* Faculty information
+
+---
+
+### 2. Data Preprocessing
+
+Before clustering, the system performs:
+
+* Encoding of categorical attributes such as domain and batch.
+* Feature scaling using **StandardScaler**.
+* Preparation of numerical data for machine learning.
+
+---
+
+### 3. K-Means Clustering
+
+Students are grouped using the **K-Means Clustering** algorithm based on:
+
+* Academic Domain
+* Batch
+
+The number of clusters is selected according to the available examination rooms, allowing students with similar academic backgrounds to be seated together.
+
+---
+
+### 4. Seating Plan Generation
+
+The seating algorithm:
+
+* Assigns students to examination rooms.
+* Respects room capacity constraints.
+* Automatically creates additional examination shifts when necessary.
+* Generates seat numbers for every student.
+
+---
+
+### 5. Faculty Allocation
+
+Faculty members are assigned to examination rooms using:
+
+* Academic domain matching.
+* Balanced round-robin distribution.
+* Automatic allocation based on the domains present in each room.
+
+---
+
+### 6. Report Generation
+
+The application automatically generates:
+
+* Student statistics
+* Domain distribution
+* Batch distribution
+* Cluster statistics
+* Seating plans
+* Faculty allocation reports
+
+Reports can be exported as **Text (.txt)** and **Excel (.xlsx)** files.
+
+---
+
+## Technologies Used
+
+| Technology   | Purpose                   |
+| ------------ | ------------------------- |
+| Python       | Core Programming Language |
+| Tkinter      | Graphical User Interface  |
+| NumPy        | Numerical Computation     |
+| Pandas       | Data Processing           |
+| Scikit-learn | K-Means Clustering        |
+| Matplotlib   | Data Visualization        |
+| OpenPyXL     | Excel Export              |
+
+---
+
+## Project Structure
+
+```text
+Automated-Exam-Management-System/
+│
+├── main.py
+├── outputs/
+├── screenshots/
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## Application Screenshots
+
+The following screenshots illustrate the graphical user interface and the outputs generated by the system.
+
+### Dashboard
+
+Displays system statistics, pipeline execution progress, and overall examination information.
+
+<img width="1902" height="993" alt="image" src="https://github.com/user-attachments/assets/2c90d6ac-22c2-44bc-9294-25153b10fc2c" />
+
+---
+
+### Exam Configuration
+
+Allows administrators to configure the number of students, room count, and domain distribution before executing the pipeline.
+
+<img width="1899" height="994" alt="image" src="https://github.com/user-attachments/assets/5163f68f-2882-4a01-a193-3e3b749bbb38" />
+
+
+---
+
+### Student Data Preview
+
+Displays the generated student records together with the assigned K-Means cluster.
+
+<img width="1215" height="815" alt="image" src="https://github.com/user-attachments/assets/385e6320-7f80-45bd-995e-c4795ae4d2d2" />
+
+
+---
+
+### Seating Plan
+
+Shows the room-wise and shift-wise seating arrangement generated by the system.
+
+<img width="1905" height="983" alt="image" src="https://github.com/user-attachments/assets/f4980ada-a749-4b43-94b4-79756b13e286" />
+
+
+---
+
+### Faculty Allocation
+
+Displays faculty assignments for each examination room according to domain expertise.
+
+<img width="1905" height="992" alt="image" src="https://github.com/user-attachments/assets/85b4fea5-d498-4fb4-9568-2e283197754e" />
+
+
+---
+
+### Domain Distribution
+
+Illustrates the distribution of students across different academic domains.
+
+<img width="1883" height="997" alt="image" src="https://github.com/user-attachments/assets/dd611ba6-a584-4e1c-9699-b4c2945c7dab" />
+
+
+---
+
+### Room Utilization
+
+Displays room occupancy percentages and seating efficiency.
+
+<img width="1906" height="998" alt="image" src="https://github.com/user-attachments/assets/ca9ef344-38ce-4d05-bd78-ca14d019d589" />
+
+
+---
+
+### Cluster Distribution
+
+Visualizes the student groups created by the K-Means clustering algorithm.
+
+<img width="1894" height="998" alt="image" src="https://github.com/user-attachments/assets/60762e77-28fa-468f-b3e9-0f5b09ea9b1d" />
+
+
+---
+
+### Batch Distribution
+
+Displays the number of students belonging to each academic batch.
+
+<img width="1904" height="1000" alt="image" src="https://github.com/user-attachments/assets/95a7545d-8d11-48be-a493-ee872ff22bfa" />
+
+
+---
+
+### Generated Report
+
+Shows the automatically generated examination report summarizing seating, clustering, and faculty allocation.
+
+<img width="1905" height="976" alt="image" src="https://github.com/user-attachments/assets/195211d9-fde5-4196-8a1a-befe01a445a2" />
+
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Asmakhan427/Automated-Exam-Management-System
+```
+
+Navigate to the project directory:
+
+```bash
+cd Automated-Exam-Management-System
+```
+
+Install the required dependencies:
+
+```bash
+pip install numpy pandas matplotlib scikit-learn openpyxl
+```
+
+---
+
+## Running the Application
+
+Execute the following command:
+
+```bash
 python main.py
- Project Highlights
-Handles large datasets (~2500 students)
-Implements real-world constraints (room capacity, shifts)
-Uses Machine Learning for optimization
-Provides user-friendly GUI interface
- Limitations
-Uses generated data (no real-time database)
-K-Means assumes uniform cluster sizes
-No advanced cheating-prevention logic
- Future Improvements
-Integration with real student database
-Web-based version (Flask/React)
-Advanced AI optimization techniques
-PDF report generation
- Author
-Asma Khan
+```
+
+---
+
+## Outputs
+
+The system generates the following outputs:
+
+* Student dataset
+* K-Means cluster assignments
+* Room-wise seating plan
+* Shift allocation
+* Faculty allocation
+* Domain statistics
+* Batch statistics
+* Room utilization charts
+* Cluster distribution charts
+* Examination summary report
+* Excel export
+* Text report
+
+
+## Author
+
+**Asma Khan**
+
+BS Computer Science
+FAST National University of Computer and Emerging Sciences
