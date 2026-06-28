@@ -2,111 +2,41 @@
 
 ## Overview
 
-The **Automated Exam Management System** is a desktop-based application developed in **Python** that automates the process of generating examination seating arrangements and faculty allocations for large-scale university examinations. The system utilizes the **K-Means Clustering** algorithm to group students based on their academic domain and batch, ensuring organized seating while maximizing room utilization.
+The **Automated Exam Management System** is a Python-based desktop application that automates examination seating and faculty allocation using the **K-Means Clustering** algorithm. It groups students by domain and batch, optimizes room utilization, and provides an interactive GUI built with **Tkinter**.
 
-The application is designed with a graphical user interface (GUI) using **Tkinter**, allowing administrators to generate seating plans, assign invigilators, visualize statistical data, and export reports with minimal manual effort.
-
----
-
-## Objectives
-
-The primary objectives of this project are:
-
-* Automate examination seating plan generation.
-* Group students using the K-Means clustering algorithm.
-* Allocate faculty members based on academic domain expertise.
 ---
 
 ## Features
 
-* Automated student data generation and preprocessing.
-* Student grouping using K-Means clustering.
-* Room-wise and shift-wise seating allocation.
-* Faculty allocation based on academic domains.
+* K-Means-based student grouping
+* Automated seating plan generation
+* Faculty allocation by domain
+* Multi-shift exam support
+* Interactive Tkinter GUI
+* Charts and report generation
+* Export reports to **TXT** and **Excel**
 
 ---
 
-## System Workflow
+## Workflow
 
-### 1. Data Collection
-
-The system generates and processes:
-
-* Student records from batches **2019–2023**
-* Students belonging to multiple academic domains
-* Examination room information
-* Faculty information
-
----
-
-### 2. Data Preprocessing
-
-Before clustering, the system performs:
-
-* Encoding of categorical attributes such as domain and batch.
-* Feature scaling using **StandardScaler**.
-* Preparation of numerical data for machine learning.
-
----
-
-### 3. K-Means Clustering
-
-Students are grouped using the **K-Means Clustering** algorithm based on:
-
-* Academic Domain
-* Batch
-
-The number of clusters is selected according to the available examination rooms, allowing students with similar academic backgrounds to be seated together.
-
----
-
-### 4. Seating Plan Generation
-
-The seating algorithm:
-
-* Assigns students to examination rooms.
-* Respects room capacity constraints.
-* Automatically creates additional examination shifts when necessary.
-* Generates seat numbers for every student.
-
----
-
-### 5. Faculty Allocation
-
-Faculty members are assigned to examination rooms using:
-
-* Academic domain matching.
-* Balanced round-robin distribution.
-* Automatic allocation based on the domains present in each room.
-
----
-
-### 6. Report Generation
-
-The application automatically generates:
-
-* Student statistics
-* Domain distribution
-* Batch distribution
-* Cluster statistics
-* Seating plans
-* Faculty allocation reports
-
-Reports can be exported as **Text (.txt)** and **Excel (.xlsx)** files.
+1. Generate student, room, and faculty data.
+2. Preprocess and cluster students using K-Means.
+3. Generate seating plans based on room capacity.
+4. Allocate faculty to examination rooms.
+5. Generate and export reports.
 
 ---
 
 ## Technologies Used
 
-| Technology   | Purpose                   |
-| ------------ | ------------------------- |
-| Python       | Core Programming Language |
-| Tkinter      | Graphical User Interface  |
-| NumPy        | Numerical Computation     |
-| Pandas       | Data Processing           |
-| Scikit-learn | K-Means Clustering        |
-| Matplotlib   | Data Visualization        |
-| OpenPyXL     | Excel Export              |
+* Python
+* Tkinter
+* NumPy
+* Pandas
+* Scikit-learn
+* Matplotlib
+* OpenPyXL
 
 ---
 
@@ -121,8 +51,6 @@ Automated-Exam-Management-System/
 ├── README.md
 └── requirements.txt
 ```
-
----
 
 ## Application Screenshots
 
