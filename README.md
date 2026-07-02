@@ -1,7 +1,7 @@
 # ExamGenius AI
 ### AI-Powered Intelligent Examination Management Platform
 
-> Built for The Mastery Mentors Hackathon — STEM/AI for Education
+> Built for The Mastery Mentors Hackathon 
 
 ---
 
@@ -267,40 +267,46 @@ openpyxl>=3.1.0
 
 **Dashboard**
 
-
+<img width="1919" height="963" alt="image" src="https://github.com/user-attachments/assets/16619fbf-f7da-4949-9eee-89b94c75ac04" />
 
 *Main dashboard showing statistics, pipeline progress, and activity log*
 
 **Configuration**
+<img width="1919" height="995" alt="image" src="https://github.com/user-attachments/assets/91e40337-9b66-4ad4-9c64-ae686231cfe4" />
 
 
 *Configuration panel with domain distribution and student preview*
 
 **Visual Classroom**
-![Classroom](screenshots/classroom.png)
+<img width="1916" height="1002" alt="image" src="https://github.com/user-attachments/assets/918133e0-888d-4d10-b3b1-9bb2bf5cabad" />
+
 *Interactive seat grid with color-coded departments*
 
 **Analytics**
-![Analytics](screenshots/analytics.png)
+<img width="1919" height="993" alt="image" src="https://github.com/user-attachments/assets/5c4d389c-520b-4fc2-9a1f-905d09f06f2c" />
+
 *Analytics suite with multiple chart types*
 
 **AI Insights**
-![Insights](screenshots/insights.png)
+<img width="1919" height="968" alt="image" src="https://github.com/user-attachments/assets/15bb6279-9ad2-4363-a206-05513bd0be55" />
+
 *AI-generated insights with confidence score and recommendations*
 
 **How AI Works**
-![How AI Works](screenshots/how_ai.png)
+<img width="1919" height="998" alt="image" src="https://github.com/user-attachments/assets/2247efd3-6560-4f20-9be9-46a75718181e" />
+
 *Visual walkthrough of the AI pipeline*
 
 **Global Search**
-![Search](screenshots/search.png)
+<img width="1919" height="1009" alt="image" src="https://github.com/user-attachments/assets/a6a00f2e-1b7e-4a71-b7bc-31ce46f1c1c0" />
+
 *Global search across all data sources*
 
 **Report & Export**
-![Report](screenshots/report.png)
+<img width="1919" height="996" alt="image" src="https://github.com/user-attachments/assets/b2dea99b-0d92-4246-bdca-68a3cd98482c" />
+
 *Report generation and export options*
 
 ---
-
 
 *"Making examinations fair, fast, and transparent — powered by AI."*
